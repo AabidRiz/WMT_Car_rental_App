@@ -1,4 +1,4 @@
-// =============================================================
+// ===========================================================
 // controllers/sosController.js
 // PURPOSE: Module 6 - Emergency & Accidents (Ekanayake).
 // Saves GPS coords immediately, then allows submitting an
