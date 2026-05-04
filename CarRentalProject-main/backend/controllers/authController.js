@@ -1,4 +1,4 @@
-// =============================================================
+// ===========================================================
 // controllers/authController.js
 // PURPOSE: Handles User Registration and Login.
 // Generates JWT tokens for authorised access.
