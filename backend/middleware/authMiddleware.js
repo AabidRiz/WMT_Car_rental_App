@@ -6,7 +6,6 @@
 //   2. Verifies it using JWT_SECRET from .env.
 //   3. Fetches the user from MongoDB and attaches it to req.user.
 //   4. `adminOnly` then checks if req.user.role === 'admin'.
-//
 // USAGE IN ROUTES:
 //   router.post('/approve', protect, adminOnly, controller.approve)
 // =============================================================
@@ -52,7 +51,6 @@ const protect = async (req, res, next) => {
     return res.status(401).json({ message: 'Not authorised. No token provided.' });
   }
 };
-
 // -----------------------------------------------------------
 // MIDDLEWARE: adminOnly
 // Must be used AFTER `protect` (so req.user already exists).
@@ -65,5 +63,4 @@ const adminOnly = (req, res, next) => {
     res.status(403).json({ message: 'Access denied. Admins only.' });
   }
 };
-
 module.exports = { protect, adminOnly };
