@@ -76,11 +76,11 @@ exports.addCar = async (req, res, next) => {
   }
 };
 
-// -----------------------------------------------------------
+// --------------------------------------------------------
 // @desc    Get all cars (or filter by availability)
 // @route   GET /api/cars
 // @access  Public
-// -----------------------------------------------------------
+// --------------------------------------------------------
 exports.getCars = async (req, res, next) => {
   try {
     // Allows query filtering like ?isAvailable=true
