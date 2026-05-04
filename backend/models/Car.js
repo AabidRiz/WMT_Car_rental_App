@@ -1,10 +1,3 @@
-// =============================================================
-// models/Car.js
-// PURPOSE: Represents a vehicle in the fleet (Module 6 - Admin).
-// Critical fields: pricePerDay, kmPerLiter, tankCapacity.
-// These three values drive the math in Booking, Fuel, and Checkout.
-// =============================================================
-
 const mongoose = require('mongoose');
 
 const CarSchema = new mongoose.Schema(
@@ -47,25 +40,25 @@ const CarSchema = new mongoose.Schema(
     pricePerDay: {
       type: Number,
       required: [true, 'Price per day is required'],
-      min: [0, 'Price cannot be negative'],
+      min: [0, 'Price cannot be negative'],//validation to prevent negative values
     },
 
     kmPerLiter: {
       type: Number,
       required: [true, 'Fuel efficiency (km/L) is required'],
-      min: [0, 'km/L cannot be negative'],
+      min: [0, 'km/L cannot be negative'],//validation to prevent negative values
     },
 
     tankCapacity: {
       type: Number, // in litres
       required: [true, 'Tank capacity is required'],
-      min: [0, 'Tank capacity cannot be negative'],
+      min: [0, 'Tank capacity cannot be negative'],//validation to prevent negative values
     },
     
     currentFuel: {
       type: Number, // in litres
       default: 0,
-      min: [0, 'Fuel cannot be negative']
+      min: [0, 'Fuel cannot be negative']//validation to prevent negative values
     },
 
     // Odometer reading at the start of the current / last rental
